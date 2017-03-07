@@ -1,0 +1,70 @@
+@import './normalize.css';
+@import './vars.scss';
+
+* { margin: 0; padding: 0;}
+html{ font-size: 62.5%;}
+body{ font-size: 14px; font-size: 1.4rem; font-family: 'Microsoft Yahei'; background-color: $mainBgColor;}
+a, a:link, a:active{
+	display: block;
+	text-decoration: none;
+	color: $mainFontColor;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexRow($align: 'center') {
+	display: flex; flex-direction: row; align-items: center; justify-content: $align;
+}
+@mixin flexColumn($align: 'center') {
+	display: flex; flex-direction: column; align-items: center; justify-content: $align;
+}
+.flexRowStart{
+	@include flexRow('flex-start');
+}
+.flexRowCenter{
+	@include flexRow();
+}
+.flexRowEnd{
+	@include flexRow('flex-end');
+}
+.flexRowBetween{
+	@include flexRow('space-between');
+}
+.flexColumnStart{
+	@include flexColumn('flex-start');
+}
+.flexColumnCenter{
+	@include flexColumn();
+}
+.flexColumnEnd{
+	@include flexColumn('flex-end');
+}
+.flexColumnBetween{
+	@include flexColumn('space-between');
+}
+
+.center{text-align: center;}
+
+.flexItem{
+	display: block;
+	flex: 1;
+}
+
+.page{
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.mainContent{
+  flex: 1;
+  width: 100%;
+  overflow-y: scroll;
+  background-color: $mainBgColor;
+}
+
