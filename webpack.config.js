@@ -90,7 +90,10 @@ var config = {
 		]
 	},
 	resolve: {
-	    extensions: [".webpack.js", ".vue", ".js", ".css", ".scss"]
+	    extensions: [".webpack.js", ".vue", ".js", ".css", ".scss"],
+	    alias: {
+	    	vue: 'vue/dist/vue.js'
+	    }
 	},
 	plugins: [
 		extractSCSS,
