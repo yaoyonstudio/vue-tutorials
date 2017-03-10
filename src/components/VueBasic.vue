@@ -28,8 +28,10 @@ export default {
         {id: 5, path: '/basic/BasicFilter', name: 'BasicFilter', title: '过滤器'},
         {id: 6, path: '/basic/BasicComponent', name: 'BasicComponent', title: '组件'},
         {id: 7, path: '/basic/BasicComponentCommunication', name: 'BasicComponentCommunication', title: '组件交互'},
-        {id: 8, path: '/basic/BasicComponentLifeCycle', name: 'BasicComponentLifeCycle', title: '组件生命周期'},
-        {id: 9, path: '/basic/BasicFormHandle', name: 'BasicFormHandle', title: '表单操作'}
+        {id: 8, path: '/basic/BasicLifeCycle', name: 'BasicLifeCycle', title: '生命周期'},
+        {id: 9, path: '/basic/BasicFormHandle', name: 'BasicFormHandle', title: '表单操作'},
+        {id: 10, path: '/basic/BasicComputed', name: 'BasicComputed', title: '计算属性'},
+        {id: 11, path: '/basic/BasicWatchers', name: 'BasicWatchers', title: '监视器'}
       ]
     }
   },

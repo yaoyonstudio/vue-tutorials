@@ -9,6 +9,15 @@ import BasicEventHandle from './components/basic/BasicEventHandle'
 import BasicDirective from './components/basic/BasicDirective'
 import BasicFilter from './components/basic/BasicFilter'
 import BasicComponent from './components/basic/BasicComponent'
+import BasicComponentCommunication from './components/basic/BasicComponentCommunication'
+import BasicLifeCycle from './components/basic/BasicLifeCycle'
+import BasicFormHandle from './components/basic/BasicFormHandle'
+import BasicComputed from './components/basic/BasicComputed'
+import BasicWatchers from './components/basic/BasicWatchers'
+
+import VueAdvance from './components/VueAdvance'
+import AdvanceFetchData from './components/advance/AdvanceFetchData'
+// import AdvanceCustomDirective from './components/advance/AdvanceCustomDirective'
 
 import NotFoundPage from './components/NotFoundPage'
 
@@ -20,6 +29,13 @@ const routes = [
   {path: '/basic/BasicDirective', name: 'BasicDirective', component: BasicDirective},
   {path: '/basic/BasicFilter', name: 'BasicFilter', component: BasicFilter},
   {path: '/basic/BasicComponent', name: 'BasicComponent', component: BasicComponent},
+  {path: '/basic/BasicComponentCommunication', name: 'BasicComponentCommunication', component: BasicComponentCommunication},
+  {path: '/basic/BasicLifeCycle', name: 'BasicLifeCycle', component: BasicLifeCycle},
+  {path: '/basic/BasicFormHandle', name: 'BasicFormHandle', component: BasicFormHandle},
+  {path: '/basic/BasicComputed', name: 'BasicComputed', component: BasicComputed},
+  {path: '/basic/BasicWatchers', name: 'BasicWatchers', component: BasicWatchers},
+  {path: '/advance', name: 'advance', component: VueAdvance},
+  {path: '/advance/AdvanceFetchData', name: 'AdvanceFetchData', component: AdvanceFetchData},
   {path: '*', component: NotFoundPage}
 ]
 

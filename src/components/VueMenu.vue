@@ -15,7 +15,8 @@ export default {
     return {
       msg: 'Menu',
       menus: [
-        {id: 1, path: '/basic', name: 'basic', title: 'Vue基础'}
+        {id: 1, path: '/basic', name: 'basic', title: 'Vue基础'},
+        {id: 2, path: '/advance', name: 'advance', title: 'Vue进阶'}
       ]
     }
   }
