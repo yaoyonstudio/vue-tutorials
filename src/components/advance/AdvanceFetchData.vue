@@ -123,7 +123,6 @@ export default {
       })
     },
     fetchDataFun (url, page, pagesize) {
-      console.log(page)
       if (!url) return
       let _page
       let _pagesize
@@ -137,12 +136,9 @@ export default {
       } else {
         _pagesize = 4
       }
-      console.log(page)
-      console.log(pagesize)
       return axios.get(url + '?_page=' + parseInt(_page) + '&_limit=' + parseInt(_pagesize))
     },
     loadArticle (page) {
-      console.log(page)
       if (!page) return
       let that = this
       that.articles = []
