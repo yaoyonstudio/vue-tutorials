@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.15.3",
+    "fastclick": "^1.0.6",
+    "velocity-animate": "^1.4.3",
     "vue": "^2.2.1",
     "vue-router": "^2.3.0"
   },
