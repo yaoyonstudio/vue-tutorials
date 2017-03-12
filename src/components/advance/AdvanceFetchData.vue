@@ -25,12 +25,14 @@
         </section>
         <section>
           <h3>分页数据</h3>
-          <div class="box2">
-            <ul v-show="articles.length">
+          <div class="box2" v-show="articles.length">
+            <ul>
                 <li v-for="article in articles">{{ article.title }}</li>
             </ul>
             <nav>
+              <span @click="loadArticle( currentPage - 1 )" v-show="currentPage > 1"><</span>
               <span v-for="i in maxPageNum" :class="{active: currentPage == i}" @click="loadArticle(i)">{{ i }}</span>
+              <span @click="loadArticle( currentPage + 1 )" v-show="currentPage < maxPageNum">></span>
             </nav>
           </div>
         </section>
@@ -47,7 +49,7 @@ export default {
   name: 'AdvanceFetchData',
   data () {
     return {
-      title: 'VueJS实例教程-Vue基础-数据请求',
+      title: 'VueJS实例教程-Vue进阶-数据请求',
       msg: 'Hello, VueJS!',
       apiUrl: 'http://localhost:3000',
       postUrl: 'http://localhost/handle.php',
@@ -185,7 +187,7 @@ export default {
     }
     nav{
       margin: 1rem auto; display: block; width: 100%; text-align: center;
-      span{display: inline-block; border: 1px solid $borderColor; width: 3rem; height: 3rem; text-align: center; margin: 0 .5rem; line-height: 3rem; border-radius: 3px;}
+      span{display: inline-block; border: 1px solid $borderColor; width: 3rem; height: 3rem; text-align: center; margin: 0 .2rem; line-height: 3rem; border-radius: 3px;}
     }
     .error{color: $mainColor;}
     .active{background-color: $mainColor; color: #fff;}

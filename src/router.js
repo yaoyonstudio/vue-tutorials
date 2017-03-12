@@ -17,7 +17,15 @@ import BasicWatchers from './components/basic/BasicWatchers'
 
 import VueAdvance from './components/VueAdvance'
 import AdvanceFetchData from './components/advance/AdvanceFetchData'
-// import AdvanceCustomDirective from './components/advance/AdvanceCustomDirective'
+import AdvanceVueRouter from './components/advance/AdvanceVueRouter'
+import AdvanceVueRouterDetail from './components/advance/AdvanceVueRouterDetail'
+import AdvanceVueRouterChild1 from './components/advance/AdvanceVueRouterChild1'
+import AdvanceVueRouterChild2 from './components/advance/AdvanceVueRouterChild2'
+import AdvanceVueRouterChild3 from './components/advance/AdvanceVueRouterChild3'
+import AdvanceSingleTransition from './components/advance/AdvanceSingleTransition'
+import AdvanceMultipleTransition from './components/advance/AdvanceMultipleTransition'
+import AdvanceCustomDirective from './components/advance/AdvanceCustomDirective'
+import AdvanceCustomerMixins from './components/advance/AdvanceCustomerMixins'
 
 import NotFoundPage from './components/NotFoundPage'
 
@@ -36,6 +44,21 @@ const routes = [
   {path: '/basic/BasicWatchers', name: 'BasicWatchers', component: BasicWatchers},
   {path: '/advance', name: 'advance', component: VueAdvance},
   {path: '/advance/AdvanceFetchData', name: 'AdvanceFetchData', component: AdvanceFetchData},
+  {
+    path: '/advance/AdvanceVueRouter',
+    name: 'AdvanceVueRouter',
+    component: AdvanceVueRouter,
+    children: [
+      {path: '/advance/AdvanceVueRouter/child1', component: AdvanceVueRouterChild1, alias: '/advance/AdvanceVueRouter'},
+      {path: '/advance/AdvanceVueRouter/child2', component: AdvanceVueRouterChild2},
+      {path: '/advance/AdvanceVueRouter/child3', component: AdvanceVueRouterChild3}
+    ]
+  },
+  {path: '/advance/AdvanceVueRouter/:id', name: 'AdvanceVueRouterDetail', component: AdvanceVueRouterDetail},
+  {path: '/advance/AdvanceSingleTransition', name: 'AdvanceSingleTransition', component: AdvanceSingleTransition},
+  {path: '/advance/AdvanceMultipleTransition', name: 'AdvanceMultipleTransition', component: AdvanceMultipleTransition},
+  {path: '/advance/AdvanceCustomDirective', name: 'AdvanceCustomDirective', component: AdvanceCustomDirective},
+  {path: '/advance/AdvanceCustomerMixins', name: 'AdvanceCustomerMixins', component: AdvanceCustomerMixins},
   {path: '*', component: NotFoundPage}
 ]
 

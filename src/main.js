@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import FastClick from 'fastclick'
 import App from './App'
 import router from './router'
 
@@ -10,6 +11,12 @@ import router from './router'
 //   console.log(next)
 //   next(true)
 // })
+
+if ('addEventListener' in document) {
+  document.addEventListener('DOMContentLoaded', function () {
+    FastClick.attach(document.body)
+  }, false)
+}
 
 /* eslint-disable no-new */
 new Vue({

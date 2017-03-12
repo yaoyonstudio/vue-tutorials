@@ -46,6 +46,15 @@
           <p>姓名：{{ fullName }}</p>
           <button @click="changeName">改变姓名</button>
         </section>
+        <section>
+          <h3>使用Computed实现查找过滤</h3>
+          <div>
+            <input type="text" name="keyword" v-model="keyword" placeholder="请输入查找关键词" />
+            <ul>
+              <li v-for="(post, index) in filterPosts">{{ index + 1 }} {{ post.title }}</li>
+            </ul>
+          </div>
+        </section>
       </div>
   </div>
 </template>
@@ -60,7 +69,20 @@ export default {
       msg: 'Hello, VueJS!',
       now: Date.now(),
       firstName: 'ken',
-      lastName: 'yao'
+      lastName: 'yao',
+      keyword: null,
+      posts: [
+        {'id': 1, 'title': '经典的歌曲永远不会过时，经典的演绎永远难以忘怀'},
+        {'id': 2, 'title': '微信又增加3大逆天功能，忍不住提醒你们记得更新'},
+        {'id': 3, 'title': '历史上死的比岳飞还憋屈的十位战神级人物，第十位真的太惨了'},
+        {'id': 4, 'title': '中国男篮为什么落后于世界水平，看球员的身体就知道了'},
+        {'id': 5, 'title': '氢弹威力巨大为何多国放弃？唯独中国保存下来？'},
+        {'id': 6, 'title': '爆笑动物：猴子和狗打架，猴子输了不服气欲拿棍棒再战'},
+        {'id': 7, 'title': '人到40血管易堵，吃什么可以清血管？'},
+        {'id': 8, 'title': '医生教你三个动作，快速清肠排毒，人人可学！'},
+        {'id': 9, 'title': '快递员的真实工资有多少？'},
+        {'id': 10, 'title': '诸葛亮一生最信任的人，也是对他最忠诚的人，武力值不输关羽张飞'}
+      ]
     }
   },
   computed: {
@@ -90,6 +112,16 @@ export default {
         var names = newName.split(' ')
         this.firstName = names[0]
         this.lastName = names[names.length - 1]
+      }
+    },
+    filterPosts () {
+      let that = this
+      if (that.keyword) {
+        return that.posts.filter((item) => {
+          return item.title.includes(that.keyword)
+        })
+      } else {
+        return that.posts
       }
     }
   },
@@ -133,6 +165,11 @@ export default {
       border-bottom: 1px solid $borderColor;
       h3{margin-bottom: .5rem;}
       .comment{color: #999;}
+      input[type=text]{width: 100%; display: block; height: 3rem; line-height: 3rem; padding: 0 .5rem; box-sizing: border-box;}
+      ul{
+        border: 1px solid $borderColor;
+        li{display: block; height: 3rem; line-height: 3rem; background-color: $lightColor; border-bottom: 1px solid $borderColor; overflow: hidden; padding: 0 .5rem;}
+      }
     }
   }
 </style>
