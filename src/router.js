@@ -26,6 +26,8 @@ import AdvanceSingleTransition from './components/advance/AdvanceSingleTransitio
 import AdvanceMultipleTransition from './components/advance/AdvanceMultipleTransition'
 import AdvanceCustomDirective from './components/advance/AdvanceCustomDirective'
 import AdvanceCustomerMixins from './components/advance/AdvanceCustomerMixins'
+import AdvanceRenderFunction from './components/advance/AdvanceRenderFunction'
+import AdvanceVuex from './components/advance/AdvanceVuex'
 
 import NotFoundPage from './components/NotFoundPage'
 
@@ -59,6 +61,8 @@ const routes = [
   {path: '/advance/AdvanceMultipleTransition', name: 'AdvanceMultipleTransition', component: AdvanceMultipleTransition},
   {path: '/advance/AdvanceCustomDirective', name: 'AdvanceCustomDirective', component: AdvanceCustomDirective},
   {path: '/advance/AdvanceCustomerMixins', name: 'AdvanceCustomerMixins', component: AdvanceCustomerMixins},
+  {path: '/advance/AdvanceRenderFunction', name: 'AdvanceRenderFunction', component: AdvanceRenderFunction},
+  {path: '/advance/AdvanceVuex', name: 'AdvanceVuex', component: AdvanceVuex},
   {path: '*', component: NotFoundPage}
 ]
 
