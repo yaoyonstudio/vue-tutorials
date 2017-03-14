@@ -17,17 +17,26 @@ import BasicWatchers from './components/basic/BasicWatchers'
 
 import VueAdvance from './components/VueAdvance'
 import AdvanceFetchData from './components/advance/AdvanceFetchData'
+
 import AdvanceVueRouter from './components/advance/AdvanceVueRouter'
 import AdvanceVueRouterDetail from './components/advance/AdvanceVueRouterDetail'
 import AdvanceVueRouterChild1 from './components/advance/AdvanceVueRouterChild1'
 import AdvanceVueRouterChild2 from './components/advance/AdvanceVueRouterChild2'
 import AdvanceVueRouterChild3 from './components/advance/AdvanceVueRouterChild3'
+
 import AdvanceSingleTransition from './components/advance/AdvanceSingleTransition'
 import AdvanceMultipleTransition from './components/advance/AdvanceMultipleTransition'
 import AdvanceCustomDirective from './components/advance/AdvanceCustomDirective'
 import AdvanceCustomerMixins from './components/advance/AdvanceCustomerMixins'
 import AdvanceRenderFunction from './components/advance/AdvanceRenderFunction'
 import AdvanceVuex from './components/advance/AdvanceVuex'
+
+import VuexBasicDemo from './components/advance/vuex/VuexBasicDemo'
+import VuexState from './components/advance/vuex/VuexState'
+import VuexGetters from './components/advance/vuex/VuexGetters'
+import VuexMutations from './components/advance/vuex/VuexMutations'
+import VuexActions from './components/advance/vuex/VuexActions'
+import VuexModules from './components/advance/vuex/VuexModules'
 
 import NotFoundPage from './components/NotFoundPage'
 
@@ -63,6 +72,12 @@ const routes = [
   {path: '/advance/AdvanceCustomerMixins', name: 'AdvanceCustomerMixins', component: AdvanceCustomerMixins},
   {path: '/advance/AdvanceRenderFunction', name: 'AdvanceRenderFunction', component: AdvanceRenderFunction},
   {path: '/advance/AdvanceVuex', name: 'AdvanceVuex', component: AdvanceVuex},
+  {path: '/advance/AdvanceVuex/VuexBasicDemo', name: 'VuexBasicDemo', component: VuexBasicDemo},
+  {path: '/advance/AdvanceVuex/VuexState', name: 'VuexState', component: VuexState},
+  {path: '/advance/AdvanceVuex/VuexGetters', name: 'VuexGetters', component: VuexGetters},
+  {path: '/advance/AdvanceVuex/VuexMutations', name: 'VuexMutations', component: VuexMutations},
+  {path: '/advance/AdvanceVuex/VuexActions', name: 'VuexActions', component: VuexActions},
+  {path: '/advance/AdvanceVuex/VuexModules', name: 'VuexModules', component: VuexModules},
   {path: '*', component: NotFoundPage}
 ]
 
